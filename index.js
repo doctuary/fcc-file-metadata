@@ -12,8 +12,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/upload', upload.single('selectedFile'), function (req, res, next) {
-  
-  res.send('file uploaded: ' + req.file.filename);
+  res.json({fileSize: req.file.size});
 })
 
 app.listen(app.get('port'), function() {
