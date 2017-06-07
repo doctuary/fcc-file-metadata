@@ -11,10 +11,9 @@ app.get('/', function(req, res) {
     res.render('index', {title: 'Hey', message: 'Hello there!'});
 });
 
-app.post('/upload', upload.single('avatar'), function (req, res, next) {
-  // req.file is the `avatar` file 
-  // req.body will hold the text fields, if there were any
-  res.send('file uploaded');
+app.post('/upload', upload.single('selectedFile'), function (req, res, next) {
+  
+  res.send('file uploaded: ' + req.file.filename);
 })
 
 app.listen(app.get('port'), function() {
