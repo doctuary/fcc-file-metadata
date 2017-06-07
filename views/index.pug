@@ -3,3 +3,14 @@ html
         title= title
     body
         h1= message
+        div
+            form(action='/upload' method='POST' enctype='multipart/form-data')
+                div
+                    label(for='say') Say:
+                    input(name='say' value='Hi')
+                br
+                div
+                    label(for='to') To:
+                    input(name='to' value='Express forms')
+                br
+                button(type='submit') Send my greetings
