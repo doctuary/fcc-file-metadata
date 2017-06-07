@@ -6,11 +6,7 @@ html
         div
             form(action='/upload' method='POST' enctype='multipart/form-data')
                 div
-                    label(for='say') Say:
-                    input(name='say' value='Hi')
+                    label(for='selectedFile') Select File:
+                    input(name='selectedFile' type='file')
                 br
-                div
-                    label(for='to') To:
-                    input(name='to' value='Express forms')
-                br
-                button(type='submit') Send my greetings
+                button(type='submit') Get Size of File
